@@ -1,6 +1,6 @@
 # Noia Software website
 
-Static portfolio site for Noia Software, including HushCalc, FocusFine, Worth the Hours, and Readium.
+Static portfolio site for Noia Software, including HushCalc, FocusFine, Worth the Hours, and Paper Quest.
 
 ## Local preview
 
