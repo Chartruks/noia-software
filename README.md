@@ -22,6 +22,7 @@ No environment variables are required. Deployments are fully static.
 - `index.html` — portfolio landing page
 - `hushcalc.html`, `focusfine.html`, `worth-the-hours.html`, `readium.html` — current product pages
 - `privacy.html` and `privacy/` — App Store privacy policy hub and app-specific policies
+- `terms.html` — shared Terms of Use for all Noia Software apps
 - `data.jsx` — product copy and feature data
 - `styles.css` — shared visual system
 - `assets/apps/` — product artwork and screenshots

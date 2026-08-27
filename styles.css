@@ -507,7 +507,11 @@
     .legal-document a, .legal-contact a { color: var(--accent); }
     .legal-document .legal-all { display: inline-flex; margin-top: 54px; }
     .legal-contact { border-top: 1px solid var(--border); margin-top: 64px; padding-top: 8px; }
-    .legal-footer { border-top: 1px solid var(--border); color: var(--fg-3); text-align: center; padding: 28px 24px; font-size: 12px; }
+    .legal-links { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 54px; }
+    .legal-links .legal-all { margin-top: 0; }
+    .legal-footer { border-top: 1px solid var(--border); color: var(--fg-3); padding: 28px 24px; font-size: 12px; display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; }
+    .legal-footer a { color: var(--accent); font-weight: 700; text-decoration: none; }
+    .legal-footer a:hover { text-decoration: underline; }
     @media (max-width: 680px) {
       .legal-nav { padding: 18px 22px; }
       .legal-shell { padding: 64px 22px 88px; }

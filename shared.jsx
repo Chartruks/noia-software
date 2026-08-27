@@ -229,6 +229,7 @@ function Footer() {
             <a href="index.html#showcase">Apps</a>
             <a href="index.html#support">Support</a>
             <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
             <a href="mailto:support@noiasoftware.com">Contact</a>
           </nav>
           <p className="footer-copy">© 2026 Noia Software. All rights reserved.</p>
