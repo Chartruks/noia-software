@@ -18,6 +18,7 @@ function ProductHero({ app }) {
             <p className="hero-sub" style={{ marginBottom: 32 }}>{app.desc}</p>
             <div className="showcase-badges"><PlatformBadges app={app} /></div>
             <div style={{ marginTop: 22 }}><StoreLinks app={app} /></div>
+            {app.privacy && <div style={{ marginTop: 18 }}><a className="back-link" href={app.privacy}>Privacy Policy</a></div>}
           </div>
           <div className="product-hero-visual">
             <PhoneCarousel app={app} />

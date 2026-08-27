@@ -1,7 +1,5 @@
 // data.jsx — shared app + feature data for Noia Software pages
 
-const SF_SCREENS = 'Stockflowscreens/Simulator Screenshot - iPhone 17 Pro - 2026-06-05 at ';
-
 const APPS = [
   {
     id: 'hushcalc', name: 'HushCalc', abbr: 'HC', category: 'Privacy & Utilities',
@@ -11,6 +9,7 @@ const APPS = [
     platforms: ['iOS', 'iPadOS'],
     status: 'In development', featured: true,
     icon: 'assets/apps/hushcalc/icon.png',
+    privacy: 'privacy/hushcalc.html',
     grad: 'linear-gradient(145deg, oklch(34% 0.015 70), oklch(17% 0.01 70))',
     tint: 'oklch(58% 0.08 70 / 0.18)',
     features: [
@@ -28,6 +27,7 @@ const APPS = [
     platforms: ['iOS'],
     status: 'In development', featured: true,
     icon: 'assets/apps/focusfine/icon.png',
+    privacy: 'privacy/focusfine.html',
     grad: 'linear-gradient(145deg, oklch(91% 0.24 123), oklch(70% 0.25 130))',
     tint: 'oklch(88% 0.22 123 / 0.18)',
     screens: [
@@ -50,6 +50,7 @@ const APPS = [
     platforms: ['iOS'],
     status: 'In development', featured: true,
     icon: 'assets/apps/worth-the-hours/icon.png',
+    privacy: 'privacy/worth-the-hours.html',
     grad: 'linear-gradient(145deg, oklch(62% 0.26 300), oklch(44% 0.25 290))',
     tint: 'oklch(62% 0.26 300 / 0.18)',
     screens: [
@@ -65,79 +66,20 @@ const APPS = [
     ],
   },
   {
-    id: 'lifeingrid', name: 'LifeInGrid', abbr: 'LG', category: 'Social',
-    page: 'lifeingrid.html',
-    tagline: 'Your family story, connected',
-    desc: 'A social network built around family trees. Share moments with relatives, discover your roots, and map the people who shaped you — across generations.',
-    platforms: ['iOS', 'Android', 'Web'],
-    grad: 'linear-gradient(145deg, oklch(68% 0.18 65), oklch(54% 0.22 44))',
-    tint: 'oklch(68% 0.18 65 / 0.18)',
+    id: 'readium', name: 'Readium', abbr: 'RD', category: 'Books & Reference',
+    page: 'readium.html',
+    tagline: 'Turn reading into momentum',
+    desc: 'An ebook reader that turns minutes and finished chapters into visible progress, helping you build a steady reading habit without losing the joy of the book.',
+    platforms: ['iOS', 'iPadOS'],
+    status: 'In development', featured: true,
+    grad: 'linear-gradient(145deg, oklch(68% 0.18 154), oklch(57% 0.21 37))',
+    tint: 'oklch(72% 0.16 75 / 0.18)',
+    privacy: 'privacy/readium.html',
     features: [
-      { name: 'Living Family Tree', tagline: 'See how you connect', desc: 'Build an interactive tree that grows with your family. Tap any relative to explore their story and how you are linked.', screens: [] },
-      { name: 'Shared Moments', tagline: 'Memories that stay in the family', desc: 'Post photos and updates to a private feed only your relatives can see — no algorithms, no strangers, just family.', screens: [] },
-      { name: 'Discover Your Roots', tagline: 'Trace your origins', desc: 'Follow branches back through the generations and uncover the places, names, and stories behind where you come from.', screens: [] },
-      { name: 'Private Circles', tagline: 'You control who sees what', desc: 'Group relatives into circles and choose exactly who can view each moment, keeping your family story safe.', screens: [] },
-    ],
-  },
-  {
-    id: 'stockflow', name: 'StockFlow', abbr: 'SF', category: 'Business',
-    page: 'stockflow.html',
-    tagline: 'Inventory made effortless',
-    desc: 'Track inventory, manage sales, and get smart insights for your small business. Simple enough to start in minutes, powerful enough to grow with you.',
-    platforms: ['Web', 'iOS'],
-    comingSoon: ['Android'],
-    icon: 'Stockflowscreens/icon-light.png',
-    grad: 'linear-gradient(145deg, oklch(52% 0.22 250), oklch(38% 0.26 266))',
-    tint: 'oklch(52% 0.22 250 / 0.18)',
-    screens: [
-      SF_SCREENS + '20.06.36.png',
-      SF_SCREENS + '20.06.39.png',
-      SF_SCREENS + '20.06.12.png',
-      SF_SCREENS + '20.06.17.png',
-      SF_SCREENS + '20.06.22.png',
-      SF_SCREENS + '20.06.26.png',
-    ],
-    features: [
-      {
-        name: 'Dashboard & Insights', tagline: 'Your business at a glance',
-        desc: 'See revenue, net profit, inventory value, and unit counts the moment you open the app, with a yearly breakdown and a monthly profit chart that make the numbers obvious.',
-        screens: [SF_SCREENS + '20.06.36.png', SF_SCREENS + '20.06.39.png'],
-      },
-      {
-        name: 'Product Catalog', tagline: 'Everything you stock, organized',
-        desc: 'Browse every item by name or SKU, group products into categories and subcategories, and find exactly what you need in seconds.',
-        screens: [SF_SCREENS + '20.06.12.png'],
-      },
-      {
-        name: 'Purchase Tracking', tagline: 'Know what you bought and when',
-        desc: 'Log every purchase order with supplier, date, item count, and total cost so your incoming stock and spending always line up.',
-        screens: [SF_SCREENS + '20.06.17.png'],
-      },
-      {
-        name: 'Sales & Channels', tagline: 'Every sale, every channel',
-        desc: 'Record sales across in-person, eBay, Shopify, and more — each with customer, date, and revenue — so you always know what is selling and where.',
-        screens: [SF_SCREENS + '20.06.22.png'],
-      },
-      {
-        name: 'Expense Management', tagline: 'Track every cost',
-        desc: 'Capture marketing, platform fees, packaging, and shipping costs by category, with running totals that feed straight into your profit numbers.',
-        screens: [SF_SCREENS + '20.06.26.png'],
-      },
-    ],
-  },
-  {
-    id: 'vint', name: 'Vint', abbr: 'VT', category: 'Lifestyle',
-    page: 'vint.html',
-    tagline: 'Your life in media',
-    desc: "Track every movie watched, game played, and series finished. Build your personal collection, rate what you love, and never lose track of what to experience next.",
-    platforms: ['iOS', 'Android'],
-    grad: 'linear-gradient(145deg, oklch(50% 0.22 300), oklch(36% 0.26 318))',
-    tint: 'oklch(50% 0.22 300 / 0.18)',
-    features: [
-      { name: 'Universal Library', tagline: 'One home for all your media', desc: 'Movies, series, and games live side by side in a single collection you can search, filter, and sort however you like.', screens: [] },
-      { name: 'Ratings & Reviews', tagline: 'Remember what you loved', desc: 'Rate everything you finish and jot down a quick note, so your taste is captured and easy to look back on.', screens: [] },
-      { name: 'Watchlist & Backlog', tagline: 'Never lose track of what is next', desc: 'Queue up what you want to watch or play next and pull from your backlog whenever you have a free evening.', screens: [] },
-      { name: 'Stats & Insights', tagline: 'See your year in media', desc: 'Discover how much you have watched and played, your favorite genres, and how your habits change over time.', screens: [] },
+      { name: 'A Reader Built In', tagline: 'Stay inside the story', desc: 'Import your books, read in a calm, adjustable view, and keep your place without bouncing between a reader and a separate habit tracker.', screens: [] },
+      { name: 'Live Reading Sessions', tagline: 'Every focused minute counts', desc: 'A lightweight session timer follows your reading time and pages, then turns each session into clear progress toward your daily goal.', screens: [] },
+      { name: 'Streaks With Perspective', tagline: 'Consistency without the pressure', desc: 'See your weekly rhythm, protect momentum with flexible goals, and celebrate chapters finished instead of chasing an empty number.', screens: [] },
+      { name: 'Your Reading Story', tagline: 'Books, milestones, and pace', desc: 'Keep a personal shelf, collect milestones, and understand your reading pace with private stats that stay tied to your own library.', screens: [] },
     ],
   },
 ];

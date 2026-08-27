@@ -1,6 +1,6 @@
 # Noia Software website
 
-Static portfolio site for Noia Software, including HushCalc, FocusFine, Worth the Hours, and the wider app catalog.
+Static portfolio site for Noia Software, including HushCalc, FocusFine, Worth the Hours, and Readium.
 
 ## Local preview
 
@@ -20,7 +20,8 @@ No environment variables are required. Deployments are fully static.
 ## Structure
 
 - `index.html` — portfolio landing page
-- `hushcalc.html`, `focusfine.html`, `worth-the-hours.html` — current product pages
+- `hushcalc.html`, `focusfine.html`, `worth-the-hours.html`, `readium.html` — current product pages
+- `privacy.html` and `privacy/` — App Store privacy policy hub and app-specific policies
 - `data.jsx` — product copy and feature data
 - `styles.css` — shared visual system
 - `assets/apps/` — product artwork and screenshots

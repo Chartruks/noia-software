@@ -84,11 +84,11 @@ function AppShowcase() {
       <div className="container">
         <div className="section-header showcase-header">
           <p className="section-eyebrow">Now in development</p>
-          <h2 className="section-title">Three apps. One point of view.</h2>
+          <h2 className="section-title">Four apps. One point of view.</h2>
           <p className="section-sub">Useful software should be calm, honest, and respectful of your attention and data.</p>
         </div>
         {featuredApps.map((app, i) => <ShowcaseRow key={app.id} app={app} flip={i % 2 !== 0} />)}
-        <div className="more-apps">
+        {moreApps.length > 0 && <div className="more-apps">
           <div className="section-header more-apps-header">
             <p className="section-eyebrow">More from Noia</p>
             <h2 className="section-title">The wider portfolio.</h2>
@@ -110,7 +110,7 @@ function AppShowcase() {
               </a>
             ))}
           </div>
-        </div>
+        </div>}
       </div>
     </section>
   );
