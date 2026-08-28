@@ -386,13 +386,6 @@
     .phone-carousel { display: flex; flex-direction: column; align-items: center; gap: 18px; }
     .phone-track { display: flex; width: 100%; height: 100%; transition: transform 0.55s cubic-bezier(0.22,1,0.36,1); }
     .phone-track .phone-img { flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; }
-    .poster-shell {
-      width: 258px; aspect-ratio: 1320 / 2868; overflow: hidden;
-      border-radius: 32px; background: var(--card); border: 1px solid var(--border);
-      box-shadow: 0 34px 72px rgba(0,0,0,0.18), 0 8px 24px rgba(0,0,0,0.08);
-    }
-    .poster-shell .phone-track { width: 100%; height: 100%; }
-    .poster-shell .phone-img { object-fit: cover; }
     .phone-nav { display: flex; align-items: center; gap: 14px; }
     .phone-arrow {
       width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--border);
@@ -454,13 +447,8 @@
         linear-gradient(150deg, var(--bg), var(--bg-alt));
     }
     .feature-card-wide .feature-visual { min-height: 640px; }
-    .feature-poster {
-      display: block; width: auto; height: 510px; max-width: 100%; object-fit: contain;
-      border-radius: 26px; box-shadow: 0 28px 62px rgba(0,0,0,0.18), 0 7px 20px rgba(0,0,0,0.08);
-      transition: transform 0.45s cubic-bezier(0.22,1,0.36,1);
-    }
-    .feature-card-wide .feature-poster { height: 560px; }
-    .feature-card:hover .feature-poster { transform: translateY(-4px) scale(1.012); }
+    .feature-visual .phone { transition: transform 0.45s cubic-bezier(0.22,1,0.36,1); }
+    .feature-card:hover .feature-visual .phone { transform: translateY(-4px) scale(1.012); }
     .feature-number {
       position: absolute; top: 22px; left: 22px; min-width: 42px; height: 42px;
       display: grid; place-items: center; padding: 0 10px; border-radius: 14px;
@@ -493,16 +481,13 @@
       .feature-card-wide:nth-child(4) .feature-visual { order: 0; }
       .feature-card-wide:nth-child(4) .feature-copy { order: 0; }
       .feature-visual, .feature-card-wide .feature-visual { min-height: 560px; }
-      .feature-poster, .feature-card-wide .feature-poster { height: 500px; }
       .feature-card-wide .feature-copy { padding: 40px; }
       .feature-card-wide .feature-title { font-size: 34px; }
     }
     @media (max-width: 680px) {
-      .poster-shell { width: min(246px, 78vw); }
       .feature-grid { gap: 18px; }
       .feature-card, .feature-card-wide { display: block; border-radius: 26px; }
       .feature-visual, .feature-card-wide .feature-visual { min-height: 500px; padding: 28px; }
-      .feature-poster, .feature-card-wide .feature-poster { height: 450px; max-height: 72vh; }
       .feature-copy, .feature-card-wide .feature-copy { padding: 28px 24px 30px; }
       .feature-title, .feature-card-wide .feature-title { font-size: 28px; }
       .feature-number { top: 16px; left: 16px; }

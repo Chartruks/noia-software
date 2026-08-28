@@ -12,7 +12,6 @@ const APPS = [
     privacy: 'privacy/hushcalc.html',
     grad: 'linear-gradient(145deg, oklch(34% 0.015 70), oklch(17% 0.01 70))',
     tint: 'oklch(58% 0.08 70 / 0.18)',
-    screenStyle: 'poster',
     screens: [
       'assets/apps/hushcalc/feature-01.png',
       'assets/apps/hushcalc/feature-02.png',
@@ -41,7 +40,6 @@ const APPS = [
     privacy: 'privacy/focusfine.html',
     grad: 'linear-gradient(145deg, oklch(91% 0.24 123), oklch(70% 0.25 130))',
     tint: 'oklch(88% 0.22 123 / 0.18)',
-    screenStyle: 'poster',
     screens: [
       'assets/apps/focusfine/feature-01.png',
       'assets/apps/focusfine/feature-02.png',
@@ -70,7 +68,6 @@ const APPS = [
     privacy: 'privacy/worth-the-hours.html',
     grad: 'linear-gradient(145deg, oklch(62% 0.26 300), oklch(44% 0.25 290))',
     tint: 'oklch(62% 0.26 300 / 0.18)',
-    screenStyle: 'poster',
     screens: [
       'assets/apps/worth-the-hours/feature-01.png',
       'assets/apps/worth-the-hours/feature-02.png',
@@ -99,7 +96,6 @@ const APPS = [
     grad: 'linear-gradient(145deg, oklch(68% 0.18 154), oklch(57% 0.21 37))',
     tint: 'oklch(72% 0.16 75 / 0.18)',
     privacy: 'privacy/readium.html',
-    screenStyle: 'poster',
     screens: [
       'assets/apps/readium/feature-01.png',
       'assets/apps/readium/feature-02.png',

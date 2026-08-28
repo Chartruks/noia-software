@@ -42,7 +42,7 @@ function FeatureCard({ app, feature, index }) {
       style={{ '--feature-tint': app.tint }}
     >
       <div className="feature-visual">
-        <img className="feature-poster" src={encodeURI(feature.screen)} alt={`${app.name}: ${feature.name}`} />
+        <PhoneCarousel app={app} screens={[feature.screen]} auto={false} />
         <span className="feature-number">{String(index + 1).padStart(2, '0')}</span>
       </div>
       <div className="feature-copy">
