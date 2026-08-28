@@ -59,6 +59,7 @@ function Nav({ links }) {
 // Cyclable phone mockup. Auto-advances through screens; dots + arrows for manual control.
 function PhoneCarousel({ app, screens, auto = true }) {
   const imgs = (screens || app.screens || []).filter(Boolean);
+  const isPoster = app.screenStyle === 'poster';
   const [idx, setIdx] = React.useState(0);
   const go = React.useCallback((next) => {
     setIdx(i => ((next % imgs.length) + imgs.length) % imgs.length);
@@ -73,6 +74,31 @@ function PhoneCarousel({ app, screens, auto = true }) {
 
   const hasImgs = imgs.length > 0;
   const multi = imgs.length > 1;
+
+  if (isPoster && hasImgs) {
+    return (
+      <div className="phone-carousel poster-carousel">
+        <div className="poster-shell">
+          <div className="phone-track" style={{ transform: `translateX(-${idx * 100}%)` }}>
+            {imgs.map((s, i) => (
+              <img key={i} className="phone-img" src={encodeURI(s)} alt={`${app.name} product screenshot ${i + 1}`} />
+            ))}
+          </div>
+        </div>
+        {multi && (
+          <div className="phone-nav">
+            <button className="phone-arrow" onClick={() => go(idx - 1)} aria-label="Previous screenshot">‹</button>
+            <div className="phone-dots">
+              {imgs.map((_, i) => (
+                <button key={i} className={`phone-dot${i === idx ? ' active' : ''}`} onClick={() => setIdx(i)} aria-label={`Screenshot ${i + 1}`} />
+              ))}
+            </div>
+            <button className="phone-arrow" onClick={() => go(idx + 1)} aria-label="Next screenshot">›</button>
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div className="phone-carousel">

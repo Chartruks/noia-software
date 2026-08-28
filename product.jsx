@@ -32,18 +32,30 @@ function ProductHero({ app }) {
   );
 }
 
-function FeatureRow({ app, feature, index, flip }) {
+function FeatureCard({ app, feature, index }) {
   const [ref, vis] = useReveal(0.1);
+  const wide = index === 0 || index === 3;
   return (
-    <div ref={ref} className={`feature-row${flip ? ' flip' : ''} reveal${vis ? ' in' : ''}`}>
-      <div className="feature-phone"><PhoneCarousel app={app} screens={feature.screens} /></div>
-      <div className="feature-copy">
-        <p className="feature-index">Feature {String(index + 1).padStart(2, '0')}</p>
-        <h3 className="feature-title">{feature.name}</h3>
-        <p className="feature-tagline">{feature.tagline}</p>
-        <p className="feature-desc">{feature.desc}</p>
+    <article
+      ref={ref}
+      className={`feature-card${wide ? ' feature-card-wide' : ''} reveal${vis ? ' in' : ''}`}
+      style={{ '--feature-tint': app.tint }}
+    >
+      <div className="feature-visual">
+        <img className="feature-poster" src={encodeURI(feature.screen)} alt={`${app.name}: ${feature.name}`} />
+        <span className="feature-number">{String(index + 1).padStart(2, '0')}</span>
       </div>
-    </div>
+      <div className="feature-copy">
+        <p className="feature-index">{feature.kicker}</p>
+        <h3 className="feature-title">{feature.name}</h3>
+        <p className="feature-desc">{feature.desc}</p>
+        {feature.points && (
+          <ul className="feature-points">
+            {feature.points.map(point => <li key={point}>{point}</li>)}
+          </ul>
+        )}
+      </div>
+    </article>
   );
 }
 
@@ -54,12 +66,14 @@ function Features({ app }) {
       <div className="container">
         <div ref={ref} className={`section-header reveal${vis ? ' in' : ''}`}>
           <p className="section-eyebrow">Features</p>
-          <h2 className="section-title">Everything {app.name}<br />can do.</h2>
-          <p className="section-sub">A closer look at the features that make {app.name} work the way you do.</p>
+          <h2 className="section-title">Six reasons<br />{app.name} stands apart.</h2>
+          <p className="section-sub">The defining product ideas, shown through the real interface and the choices behind it.</p>
         </div>
-        {app.features.map((f, i) => (
-          <FeatureRow key={f.name} app={app} feature={f} index={i} flip={i % 2 !== 0} />
-        ))}
+        <div className="feature-grid">
+          {app.features.map((f, i) => (
+            <FeatureCard key={f.name} app={app} feature={f} index={i} />
+          ))}
+        </div>
       </div>
     </section>
   );
