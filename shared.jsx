@@ -58,7 +58,7 @@ function Nav({ links }) {
 
 function screenshotSrc(path) {
   const encoded = encodeURI(path);
-  return `${encoded}${encoded.includes('?') ? '&' : '?'}v=20260828-refresh`;
+  return `${encoded}${encoded.includes('?') ? '&' : '?'}v=20260828-hush`;
 }
 
 // Cyclable phone mockup. Auto-advances through screens; dots + arrows for manual control.
