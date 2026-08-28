@@ -155,7 +155,7 @@ function Support({ apps, defaultApp }) {
     const appName = (apps || APPS).find(app => app.id === form.app)?.name || 'General';
     const subject = encodeURIComponent(`${appName} support request from ${form.name}`);
     const body = encodeURIComponent(`${form.message}\n\nReply to: ${form.name} <${form.email}>`);
-    window.location.href = `mailto:support@noiasoftware.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:support@noiasoftware.org?subject=${subject}&body=${body}`;
     setSent(true);
   };
 
@@ -170,7 +170,7 @@ function Support({ apps, defaultApp }) {
             <div className="support-meta">
               <div className="support-meta-item">
                 <div className="meta-icon">✉</div>
-                <span>support@noiasoftware.com</span>
+                <span>support@noiasoftware.org</span>
               </div>
               <div className="support-meta-item">
                 <div className="meta-icon">24h</div>
@@ -235,7 +235,7 @@ function Footer() {
             <a href="index.html#support">Support</a>
             <a href="privacy.html">Privacy</a>
             <a href="terms.html">Terms</a>
-            <a href="mailto:support@noiasoftware.com">Contact</a>
+            <a href="mailto:support@noiasoftware.org">Contact</a>
           </nav>
           <p className="footer-copy">© 2026 Noia Software. All rights reserved.</p>
         </div>
