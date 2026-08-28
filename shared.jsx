@@ -56,6 +56,11 @@ function Nav({ links }) {
   );
 }
 
+function screenshotSrc(path) {
+  const encoded = encodeURI(path);
+  return `${encoded}${encoded.includes('?') ? '&' : '?'}v=20260828-refresh`;
+}
+
 // Cyclable phone mockup. Auto-advances through screens; dots + arrows for manual control.
 function PhoneCarousel({ app, screens, auto = true }) {
   const imgs = (screens || app.screens || []).filter(Boolean);
@@ -81,7 +86,7 @@ function PhoneCarousel({ app, screens, auto = true }) {
           {hasImgs ? (
             <div className="phone-track" style={{ transform: `translateX(-${idx * 100}%)` }}>
               {imgs.map((s, i) => (
-                <img key={i} className="phone-img" src={encodeURI(s)} alt={`${app.name} screenshot ${i + 1}`} />
+                <img key={i} className="phone-img" src={screenshotSrc(s)} alt={`${app.name} screenshot ${i + 1}`} />
               ))}
             </div>
           ) : (
