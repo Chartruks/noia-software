@@ -83,9 +83,9 @@ function AppShowcase() {
     <section id="showcase" className="section showcase-section">
       <div className="container">
         <div className="section-header showcase-header">
-          <p className="section-eyebrow">Now in development</p>
+          <p className="section-eyebrow">From Noia Software</p>
           <h2 className="section-title">Four apps. One point of view.</h2>
-          <p className="section-sub">Useful software should be calm, honest, and respectful of your attention and data.</p>
+          <p className="section-sub">HushCalc, Paper Quest, and Worth the Hours are available now on the App Store. FocusFine is on the way.</p>
         </div>
         {featuredApps.map((app, i) => <ShowcaseRow key={app.id} app={app} flip={i % 2 !== 0} />)}
         {moreApps.length > 0 && <div className="more-apps">

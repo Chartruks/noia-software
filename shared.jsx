@@ -137,7 +137,21 @@ function StoreLinks({ app }) {
   }
   return (
     <div className="store-links">
-      {app.links.ios     && <a href={app.links.ios} className="store-btn">App Store</a>}
+      {app.links.ios && (
+        <a
+          href={app.links.ios}
+          className="app-store-badge-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Download ${app.name} on the App Store`}
+        >
+          <img
+            className="app-store-badge"
+            src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us"
+            alt="Download on the App Store"
+          />
+        </a>
+      )}
       {app.links.android && <a href={app.links.android} className="store-btn">Google Play</a>}
       {app.links.web     && <a href={app.links.web} className="store-btn">Web App</a>}
       {(app.comingSoon || []).includes('Android') && <span className="store-btn store-btn-soon">Google Play · Coming Soon</span>}
@@ -239,6 +253,7 @@ function Footer() {
           </nav>
           <p className="footer-copy">© 2026 Noia Software. All rights reserved.</p>
         </div>
+        <p className="footer-legal">Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc.</p>
       </div>
     </footer>
   );
