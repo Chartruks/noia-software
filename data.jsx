@@ -36,7 +36,7 @@ const APPS = [
     tagline: 'Block apps. Keep your promise.',
     desc: 'Choose the distractions in your way, decide how long you want to focus, and make a commitment. FocusFine shields selected apps until the timer ends.',
     platforms: ['iOS'],
-    status: 'In development', featured: true,
+    status: 'Coming soon', featured: true,
     icon: 'assets/apps/focusfine/icon.png',
     privacy: 'privacy/focusfine.html',
     grad: 'linear-gradient(145deg, oklch(91% 0.24 123), oklch(70% 0.25 130))',
